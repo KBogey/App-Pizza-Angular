@@ -1,0 +1,73 @@
+<a [routerLink]="['/admin']">Retour à la page Administrateur</a>
+
+<div *ngIf="!pizzaEditForm">Chargement en cours !</div>
+
+<div *ngIf="pizzaEditForm" class="text-justify me-auto ms-auto" style="width: 50%;">
+  <h1 class="display-5">Formulaire d'édition de la pizza {{ pizzaEditForm.nom }}</h1>
+
+  <form #formValidation="ngForm" (ngSubmit)="submitEditForm()" >
+    
+    <div class="form-group form-control">
+        <label for="nom">Nouveau nom</label><br>
+        <input type="text" name="nom" id="nom" #nomInput="ngModel" [(ngModel)]="pizzaEditForm.nom"/>
+        <div *ngIf="!nomInput.valid">La saisie du nom n'est pas valide</div>
+    </div>
+
+    <div class="form-group form-control">
+        <label for="base">Base</label><br>
+        <input type="text" name="base" id="base" #baseInput="ngModel" [(ngModel)]="pizzaEditForm.base"/>
+        <div *ngIf="!baseInput.valid">La saisie de la base n'est pas valide</div>
+    </div>
+
+    <div class="form-group form-control">
+        <label for="image">Image</label><br>
+        <input type="text" name="image" id="image" #imageInput="ngModel" [(ngModel)]="pizzaEditForm.image"/>
+        <div *ngIf="!imageInput.valid">La saisie de l'image n'est pas valide</div>
+    </div>
+
+    <div class="form-group form-control">
+        <label for="ingredient1">Ingrédient 1</label><br>
+        <input type="text" name="ingredient1" id="ingredient1" #ingredient1Input="ngModel" [(ngModel)]="pizzaEditForm.ingredient1"/>
+        <div *ngIf="!ingredient1Input.valid">La saisie de l'ingrédient 1 n'est pas valide</div>
+    </div>
+
+    <div class="form-group form-control">
+        <label for="ingredient2">Ingrédient 2</label><br>
+        <input type="text" name="ingredient2" id="ingredient2" #ingredient2Input="ngModel" [(ngModel)]="pizzaEditForm.ingredient2"/>
+        <div *ngIf="!ingredient2Input.valid">La saisie de l'ingrédient 2 n'est pas valide</div>
+    </div>
+
+    <div class="form-group form-control">
+        <label for="ingredient3">Ingrédient 3</label><br>
+        <input type="text" name="ingredient3" id="ingredient3" #ingredient3Input="ngModel" [(ngModel)]="pizzaEditForm.ingredient3"/>
+        <div *ngIf="!ingredient3Input.valid">La saisie de l'ingrédient 3 n'est pas valide</div>
+    </div>
+
+    <div class="form-group form-control">
+        <label for="ingredient4">Ingrédient 4</label><br>
+        <input type="text" name="ingredient4" id="ingredient4" #ingredient4Input="ngModel" [(ngModel)]="pizzaEditForm.ingredient4"/>
+        <div *ngIf="!ingredient4Input.valid">La saisie de l'ingrédient 4 n'est pas valide</div>
+    </div>
+
+    <div class="form-group form-control">
+        <label for="prixPT">Prix du petit format</label><br>
+        <input type="number" name="prixPT" id="prixPT" #prixPTInput="ngModel" [(ngModel)]="pizzaEditForm.prixPT"/>
+        <div *ngIf="!prixPTInput.valid">La saisie du prix est incorrecte</div>
+    </div>
+
+    <div class="form-group form-control">
+        <label for="prixMY">Prix du moyen format</label><br>
+        <input type="number" name="prixMY" id="prixMY" #prixMYInput="ngModel" [(ngModel)]="pizzaEditForm.prixMY"/>
+        <div *ngIf="!prixMYInput.valid">La saisie du prix est incorrecte</div>
+    </div>
+
+    <div class="form-group form-control">
+        <label for="prixGD">Prix du grand format</label><br>
+        <input type="number" name="prixGD" id="prixGD" #prixGDInput="ngModel" [(ngModel)]="pizzaEditForm.prixGD"/>
+        <div *ngIf="!prixGDInput.valid">La saisie du prix est incorrecte</div>
+    </div>
+
+    <input class="form-control btn btn-success" [disabled]="!formValidation.valid" type="submit">
+  </form>
+
+</div>

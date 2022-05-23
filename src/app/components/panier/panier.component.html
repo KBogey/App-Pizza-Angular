@@ -1,0 +1,27 @@
+<!--Cart-->
+<h4 *ngIf="cartPizzas.length === 0" class="cartheader ml-4"  >Votre panier est vide.</h4>
+<!-- <h4 *ngIf="cartPizzas.length >=1" class="cartheader ml-4"  >Votre panier contient {{prods}} articles.</h4> -->
+<div *ngIf="cartPizzas.length !== 0" class="cart-overlay">
+  <div class="cart" style="display: flex;">
+    <div class="cart-content">
+      <!--cart item-->
+      <div class="cart-item" *ngFor="let pizza of cartPizzas">
+        <img  src="{{pizza.image}}" class="product-img" alt="pizza">
+        <div>
+          <h4>{{pizza.nom}}</h4>
+          <h4 style="padding-top: 15px;">{{pizza.prixPT || pizza.prixMY || pizza.prixGD}}
+            <span class="ml-4">{{pizza.id}}</span>
+          </h4>
+        </div>
+        <!-- <div class="counter mx-auto my-auto">
+          <i class="fa fa-plus mt-4" aria-hidden="true" (click)="handleIncrement(pizza)"></i>
+          <!-- <p class="pizza-amount mt-4">{{pizza.quantity}}</p> -->
+          <!-- <i class="fa fa-minus mt-4" aria-hidden="true" (click)="handleDecriment(pizza)"></i>
+        </div>
+        <span class="remove-item" class="makebold" style="cursor:pointer" (click)="handelRemoveItem(pizza)">Supprimez de la commande</span> --> -->
+      </div>
+      <!--End cart item-->
+    </div>
+</div>
+</div>
+<!--End of Cart-->

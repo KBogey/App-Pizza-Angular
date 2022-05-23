@@ -1,0 +1,55 @@
+<div class="container">
+
+  <h1>Bienvenue sur la page administrateur</h1>
+  <div class="d-flex flex-column m-2">
+
+    <a [routerLink]="['/addPizza']" class="p-1">Ajouter une nouvelle pizza</a>
+    
+  </div><br>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Base</th>
+        <th scope="col">Ingredient 1</th>
+        <th scope="col">Ingredient 2</th>
+        <th scope="col">Ingredient 3</th>
+        <th scope="col">Ingredient 4</th>
+        <th scope="col">Image</th>
+        <th scope="col">Gamme de prix</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pizza of Pizzas">
+        <th scope="row">{{pizza.id}}</th>
+        <td>{{pizza.nom}}</td>
+        <td>{{pizza.base}}</td>
+        <td>{{pizza.ingredient1}}</td>
+        <td>{{pizza.ingredient2}}</td>
+        <td>{{pizza.ingredient3}}</td>
+        <td>{{pizza.ingredient4}}</td>
+        <td><img style="width:100px;height: 100px; background-size: cover;" src="{{pizza.image}}" alt="{{pizza.nom}}"/></td>
+        <td>
+          <div class="d-flex flex-column">
+            {{pizza.prixPT}} euros petit<br><br>
+            {{pizza.prixMY}} euros moyen<br><br>
+            {{pizza.prixGD}} euros grand<br><br>
+          </div>
+        </td>
+        <td>
+            <div class="d-flex flex-column">
+                <a class="text-underline" *ngIf="pizza.id" (click)="removePizza(pizza.id)">Supprimez la pizza</a>
+                <a [routerLink]="['/editPizza', pizza.id]">Editer la pizza</a>
+            </div>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+</div>
+
+<!-- *ngIf="userLogin.username=='admin' && userLogin.password=='admin'" -->

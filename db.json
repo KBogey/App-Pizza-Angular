@@ -1,0 +1,68 @@
+{
+  "pizzas": [
+    {
+      "base": "Crème",
+      "nom": "Thon - Oignons rouge",
+      "image": "https://img-3.journaldesfemmes.fr/AUFIeTJyOWKZr4DKo0InBrE1cKQ=/750x500/smart/d9600548d5a84770846cdc537ee5f964/recipe-jdf/10041901.jpg",
+      "ingredient1": "Mozzarella",
+      "ingredient2": "Thon",
+      "ingredient3": "Oignon rouge",
+      "ingredient4": "Olives",
+      "id": 1,
+      "prixPT": 8,
+      "prixMY": 10,
+      "prixGD": 11
+    },
+    {
+      "base": "Crème",
+      "nom": "Savoyarde",
+      "image": "https://www.francine.com/media/cache/resolve/recipe_big/uploads/media/recipe/0001/04/pizza-savoyarde.jpeg",
+      "ingredient1": "Emmental",
+      "ingredient2": "Reblochon",
+      "ingredient3": "Lardons",
+      "ingredient4": "Un oeuf",
+      "id": 2,
+      "prixPT": 8,
+      "prixMY": 10,
+      "prixGD": 11
+    },
+    {
+      "base": "Tomate",
+      "nom": "4 saisons",
+      "image": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/vimdb/83564.jpg",
+      "ingredient1": "Mozzarella",
+      "ingredient2": "Champignon",
+      "ingredient3": "Artichaut",
+      "ingredient4": "Proscuitto",
+      "id": 3,
+      "prixPT": 8,
+      "prixMY": 10,
+      "prixGD": 11
+    },
+    {
+      "base": "Tomate",
+      "nom": "Napolitaine",
+      "image": "https://i0.wp.com/recette-italienne.fr/wp-content/uploads/2021/01/pizza-napoletana.jpg?fit=640%2C627&ssl=1",
+      "ingredient1": "Mozzarella",
+      "ingredient2": "Tomates du Vésuve",
+      "ingredient3": "Feuilles de basilic entières",
+      "id": 4,
+      "prixPT": 8,
+      "prixMY": 10,
+      "prixGD": 11
+    },
+    {
+      "base": "Tomate",
+      "id": 5,
+      "image": "https://img.cuisineaz.com/660x660/2014/08/29/i27938-pizza-reine-maison.jpeg",
+      "ingredient1": "Proscuitto bianco",
+      "ingredient2": "Mozzarella",
+      "ingredient3": "Champignons",
+      "ingredient4": "Feuilles de basilic entières",
+      "nom": "Reine",
+      "prixPT": 8,
+      "prixMY": 10,
+      "prixGD": 11
+    }
+  ]
+}

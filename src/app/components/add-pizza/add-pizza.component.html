@@ -1,0 +1,67 @@
+<div class="container p-4 m-4 justify-content-center">
+    <h1>Ajout d'une pizza à la carte</h1>
+    <a [routerLink]="['/admin']">Retour à la page Administrateur</a>
+    <form #form="ngForm" (ngSubmit)="pizzaFormValidation()"  class="d-flex flex-column justify-content-center align-content-center me-auto ms-auto">
+        <div class="form-group">
+            <label for="nom">Nom de la pizza</label><br>
+            <input type="text" id="nom" name="nom" class="form-control" required
+            #nomValidation="ngModel" [(ngModel)]="pizzaForm.nom" >
+        </div>
+        <div *ngIf="!nomValidation.valid" class="alert alert-danger">
+            Un nom est requis.
+        </div>
+    
+        <div class="form-group">
+            <label for="base">Base de la pizza (Crème ou Tomate)</label><br>
+            <input type="text" id="base" name="base" class="form-control" required
+            #baseValidation="ngModel" [(ngModel)]="pizzaForm.base">
+        </div>
+        <div *ngIf="!baseValidation.valid && pizzaForm.base!=='Tomate' && pizzaForm.base!=='Crème' " class="alert alert-danger">
+            Une base est requise (Crème ou Tomate).
+        </div>
+
+
+    
+        <div class="form-group">
+            <label for="image">Image de la pizza (utiliser une URL)</label><br>
+            <input type="text" id="image" name="image" class="form-control" required
+            #imageValidation="ngModel" [(ngModel)]="pizzaForm.image">
+        </div>
+        <div *ngIf="!imageValidation.valid" class="alert alert-danger">
+            Une image est requise.
+        </div>
+    
+        <div class="form-group">
+            <label for="ingredient1">Premier ingrédient de la pizza</label><br>
+            <input type="text" id="ingredient1" name="ingredient1" class="form-control" required
+            #ingredient1Validation="ngModel" [(ngModel)]="pizzaForm.ingredient1">
+        </div>
+        <div *ngIf="!ingredient1Validation.valid" class="alert alert-danger">
+            Au moins deux ingrédients sont requis.
+        </div>
+    
+        <div class="form-group">
+            <label for="ingredient2">Second ingrédient de la pizza</label><br>
+            <input type="text" id="ingredient2" name="ingredient2" class="form-control" required
+            #ingredient2Validation="ngModel" [(ngModel)]="pizzaForm.ingredient2">
+        </div>
+        <div *ngIf="!ingredient2Validation.valid" class="alert alert-danger">
+            Au moins deux ingrédients sont requis.
+        </div>
+    
+        <div class="form-group mb-2">
+            <label for="ingredient3">Troisième ingrédient de la pizza</label><br>
+            <input type="text" id="ingredient3" name="ingredient3" class="form-control"
+            [(ngModel)]="pizzaForm.ingredient3">
+        </div>
+    
+        <div class="form-group mb-2">
+            <label for="ingredient4">Quatrième ingrédient de la pizza</label><br>
+            <input type="text" id="ingredient4" name="ingredient4" class="form-control"
+            [(ngModel)]="pizzaForm.ingredient4">
+        </div>
+    
+        <input class="btn btn-success form-control" [disabled]="!form.valid" type="submit" value="Ajouter la pizza">
+    
+    </form>
+</div>
