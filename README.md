@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## JSON-SERVER
 
-The api uses the json-server, don't forget to install it `npm i -g json-server`, and then to run it `json-server -w db.json`.
+Don't forget to run json server `json-server -w db.json`.
 
 ## ADMIN PANEL
 
