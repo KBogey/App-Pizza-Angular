@@ -1,5 +1,15 @@
-<div class="container">
-    <h1 class="text-success display-3">Voici nos pizzas</h1>
+<div class="d-flex flex-wrap">
+  
+    <div *ngFor="let pizza of Pizzas" class="card mx-5 my-3" style="width: 18rem;">
+      <img class="card-img-top" style="width:18rem;height: 18rem; background-size: cover;" src="{{pizza.image}}" alt="{{pizza.nom}}" alt="PizzZza"/>
+      <div class="card-body">
+        <h5 class="card-title">Nº {{pizza.id}}, la {{pizza.nom}}</h5>
+        <p class="card-text">Pizza base {{pizza.base}}, avec {{pizza.ingredient1}} {{pizza.ingredient2}} {{pizza.ingredient3}} {{pizza.ingredient4}}. </p>
+        <a href="#" class="btn btn-success">Détails</a>
+      </div>
+    </div>
+  
+    <!-- <h1 class="text-success display-3">Voici nos pizzas</h1>
     <table class="table">
         <thead>
           <tr>
@@ -26,11 +36,11 @@
             <td><img style="width:100px;height: 100px; background-size: cover;" src="{{pizza.image}}" alt="{{pizza.nom}}"/></td>
             <td>
                 <div class="d-flex flex-column">
-                    <!-- <a (click)="commandActivated({{pizza.id}})">Ajouter la pizza au panier</a> -->
+                    <a (click)="commandActivated({{pizza.id}})">Ajouter la pizza au panier</a>
                 </div>
             </td>
           </tr>
           
         </tbody>
-      </table>
+      </table> -->
 </div>
